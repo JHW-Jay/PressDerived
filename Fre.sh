@@ -1,8 +1,8 @@
 #!/bin/bash
-
+#install
 #Simple fresh install script..
 #more to come along the road.
-
+# "package list" array 
 
 # Default stuff 
 CWD=`pwd`;
@@ -27,7 +27,32 @@ run_as_user() {
 	sudo -u $target_user bash -c "$1";
 }
 
+#Chage default setup to package list
+package_list=(
+git
+curl
+wget
+gimp
+ssh
+python3
+build-essential
+jq
+neofetch
+filezilla
+vlc
+TeXstudio
+ffmpeg
+steam
+qbittorrent
+libreoffice
+libreoffice-l10n-nb
+myspell-nb
+mythes-no
+qalc
+qalculate-gtk
+flatpak
 
+)
 # Standards needs to be fixed.....
 #assumes minimal as default
 
@@ -41,6 +66,7 @@ apt install ssh -y
 apt install build-essential -y 
 apt install python3 -y
 apt install jq -y
+
 
 
 #others
