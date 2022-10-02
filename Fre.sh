@@ -57,6 +57,7 @@ flatpak
 #assumes minimal as default
 
 apt update && apt update -y
+apt install ${package_list[*]} -y
 #standard tools
 apt install git -y
 apt install curl -y
