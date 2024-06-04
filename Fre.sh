@@ -110,7 +110,7 @@ wget https://github.com/GloriousEggroll/proton-ge-custom/releases/download/$GEPr
 tar -xf $GEProtonVERSION.tar.gz -C "/home/$USER/.steam/root/compatibilitytools.d"
 
 
-#Wine install 
+#Wine install  ---- wine install needs work, and is it even used.......
 sudo dpkg --add-architecture i386 
 mkdir -pm755 /etc/apt/keyrings
 wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
@@ -131,3 +131,12 @@ Unattended-Upgrade::Allowed-Origins::
 "LP-PPA-mozillateam:${distro_codename}";
 ' |  tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
 apt install firefox -y
+
+#ssh -- pull from bk 
+
+
+#btrfs ---
+
+#tor
+
+
