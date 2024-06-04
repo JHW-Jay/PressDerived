@@ -51,6 +51,7 @@ mythes-no
 qalc
 qalculate-gtk
 flatpak
+gnome-software-plugin-flatpak
 
 )
 # Standards needs to be fixed.....
@@ -59,41 +60,42 @@ flatpak
 apt update && apt update -y
 apt install ${package_list[*]} -y
 #standard tools
-apt install git -y
-apt install curl -y
-apt install wget -y
-apt install gimp -y 
-apt install ssh -y
-apt install build-essential -y 
-apt install python3 -y
-apt install jq -y
+#apt install git -y
+#apt install curl -y
+#apt install wget -y
+#apt install gimp -y 
+#apt install ssh -y
+#apt install build-essential -y 
+#apt install python3 -y
+#apt install jq -y
 
 
 
 #others
-apt install neofetch -y 
-apt install filezilla -y
-apt install vlc -y 
-apt install TeXstudio -y 
-apt install ffmpeg -y
+#apt install neofetch -y 
+#apt install filezilla -y
+#apt install vlc -y 
+#apt install TeXstudio -y 
+#apt install ffmpeg -y
 
 #standard apps 
-apt install steam -y
-apt install qbittorrent -y  
+#apt install steam -y
+#apt install qbittorrent -y  
 
 #libreoffice in nb defaults manual internal setup to be looked at later
-apt install libreoffice libreoffice-l10n-nb myspell-nb mythes-no -y 
+#apt install libreoffice libreoffice-l10n-nb myspell-nb mythes-no -y 
 
 # nice calcualtor 
-apt install qalc -y 
-apt install qalculate-gtk -y
+#apt install qalc -y 
+#apt install qalculate-gtk -y
 
 #flatpak section 
-apt install flatpak -y
-apt install gnome-software-plugin-flatpak -y
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+#apt install flatpak -y
+#apt install gnome-software-plugin-flatpak -y
 
-#flatpaks
+
+#flatpak stuff
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.usebottles.bottles
 
 
@@ -128,4 +130,4 @@ echo '
 Unattended-Upgrade::Allowed-Origins:: 
 "LP-PPA-mozillateam:${distro_codename}";
 ' |  tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
-apt install firefox
+apt install firefox -y
