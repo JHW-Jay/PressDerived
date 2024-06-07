@@ -139,4 +139,4 @@ apt install firefox -y
 
 #tor
 
-
+#Shell -- need to decide on a shell fish zsh expsh etc etc 
